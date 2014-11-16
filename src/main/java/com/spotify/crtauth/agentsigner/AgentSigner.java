@@ -43,7 +43,7 @@ public class AgentSigner implements Signer {
 
   public AgentSigner() {
     try {
-      this.sshAgent = new AgentClient(System.getenv("SSH_AGENT_SOCKET"));
+      this.sshAgent = new AgentClient(System.getenv("SSH_AUTH_SOCK"));
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
